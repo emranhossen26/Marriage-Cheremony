@@ -4,11 +4,13 @@ using namespace std;
 int main()
 {
 
-    int i,n=200,taka,sum=0,count=0;
+    int i,n,taka,sum=0,sum2=0,giftn;
 
     string address,gift,name;
 
-
+    cout<<"How Many People Invited:";
+    cin>>n;
+    cin.ignore();
     int flag=0;
 
 
@@ -22,23 +24,22 @@ int main()
         if(taka==0)
         {
             flag=1;
-
             cout<<"Gift Name:";
             cin.ignore();
             getline(cin,gift);
-
+            cout<<"Number Of Gift:";
+            cin>>giftn;
             cout << "Address:";
             cin.ignore();
             getline(cin,address);
-
-            count++;
+            sum2=sum2+giftn;
 
         }
 
         else
         {
 
-            cout << "Address:";
+            cout <<"Address:";
             cin.ignore();
             getline(cin,address);
 
@@ -47,8 +48,9 @@ int main()
         sum=sum+taka;
 
         cout <<"Total Amount:"<<sum<<endl;
-        cout<<"Number of gift:"<<count<<endl;
+        cout<<"Total gift:"<<sum2<<endl;
         cout<<endl;
+
 
     }
 
